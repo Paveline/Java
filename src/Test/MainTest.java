@@ -11,24 +11,26 @@ class MainTest {
         double x = 0;
         double e = Math.pow(10, -3);
 
-        String expected = Main.NumberFormat(Main.TailorFunc(x,e));
-        String actual = Main.NumberFormat(Main.TailorActualFunc(x));
-        assertEquals(expected, actual);
+
+        double expected = (Main.tailorFunc(x,e));
+        double actual = (Main.tailorActualFunc(x));
 
         x = -0.5;
         e = Math.pow(10, -5);
-        expected = Main.NumberFormat(Main.TailorFunc(x,e));
-        actual = Main.NumberFormat(Main.TailorActualFunc(x));
+        expected = (Main.tailorFunc(x,e));
+        actual = (Main.tailorActualFunc(x));
+        assertEquals(expected, actual, e);
 
         x = 0.1;
         e = Math.pow(10, -10);
-        expected = Main.NumberFormat(Main.TailorFunc(x,e));
-        actual = Main.NumberFormat(Main.TailorActualFunc(x));
+        expected = (Main.tailorFunc(x,e));
+        actual = (Main.tailorActualFunc(x));
+        assertEquals(expected, actual, e);
 
         x = 0.8;
         e = Math.pow(10, -12);
-        expected = Main.NumberFormat(Main.TailorFunc(x,e));
-        actual = Main.NumberFormat(Main.TailorActualFunc(x));
-        assertEquals(expected, actual);
+        expected = (Main.tailorFunc(x,e));
+        actual = (Main.tailorActualFunc(x));
+        assertEquals(expected, actual, e);
     }
 }
